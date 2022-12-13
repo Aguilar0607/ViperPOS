@@ -1,5 +1,5 @@
 from config.wsgi import *
-from core.erp.models import Type, Employee
+from core.erp.models import *
 # Create your tests here.
 
 #  Listar
@@ -33,5 +33,14 @@ from core.erp.models import Type, Employee
 # e = Employee.objects.filter(name__endswith='l')
 # print(e)
 
+# for i in Type.objects.filter(namee = Employee.objects.filter(name__endswith='l')
+# print(e)
+
 # for i in Type.objects.filter(name__endswith='l'):
+#     print(i.name)__endswith='l'):
 #     print(i.name)
+
+print(Category.objects.all())
+
+for i in Category.objects.filter():
+    print(i)
