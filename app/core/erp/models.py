@@ -25,6 +25,16 @@ class Category(models.Model):
         verbose_name_plural = 'Categorias'
         ordering = ['id']
 
+class Product(models.Model):
+    name = models.CharField(max_length=150, verbose_name='Nombre')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Producto'
+        verbose_name_plural = 'Productos'
+        ordering = ['id']
 
 class Employee(models.Model):
     categ = models.ManyToManyField(Category)

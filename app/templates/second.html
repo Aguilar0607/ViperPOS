@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<a href="{% url 'erp:view1' %}">Click</a>
+<ul>
+    {% for pro in products %}
+    <li>{{ pro.id }} / {{ pro.name }}</li>
+    {% endfor %}
+</ul>
+    
+{% endblock %}
