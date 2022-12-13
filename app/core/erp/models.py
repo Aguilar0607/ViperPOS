@@ -3,7 +3,7 @@ from datetime import datetime
 # Create your models here.
 
 class Type(models.Model):
-    name = models.CharField(max_length=150, verbose_name='Nombre')
+    name = models.CharField(max_length=150, verbose_name='Nombre', unique=True)
 
     def __str__(self):
         return self.name
@@ -12,6 +12,7 @@ class Type(models.Model):
         verbose_name = 'Tipo'
         verbose_name_plural = 'Tipos'
         ordering = ['id']
+
 
 class Category(models.Model):
     name = models.CharField(max_length=150, verbose_name='Nombre')
